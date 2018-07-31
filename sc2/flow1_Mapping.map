@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="/sc_def1.xsd"/>
+    <output path="/sc_def2.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="flow1_Mapping">
+        <input path="mb:msg(sc_def,assembly,DFDL,Properties)" var="MessageAssembly"/>
+        <output path="mb:msg(sc_def2,assembly,DFDL,Properties)" var="MessageAssembly1"/>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly1/Properties"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/sc_def/record[1]/field1"/>
+            <output path="$MessageAssembly1/sc_def2/record/field1"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/sc_def/record[1]/field3"/>
+            <output path="$MessageAssembly1/sc_def2/record/field2"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>
