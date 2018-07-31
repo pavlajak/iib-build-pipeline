@@ -5,6 +5,9 @@ CREATE COMPUTE MODULE flow1_Compute
 	BEGIN
 		CALL CopyMessageHeaders();
 	
+	
+		--some comment here
+		
 		DECLARE response CHARACTER;
 		SET response = 'Hello from sc1!';
 		SET OutputRoot.BLOB.BLOB = CAST(response AS BLOB CCSID 1208);

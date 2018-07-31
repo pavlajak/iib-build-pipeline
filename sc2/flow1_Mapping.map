@@ -11,11 +11,11 @@
         </move>
         <move>
             <input path="$MessageAssembly/sc_def/record[1]/field1"/>
-            <output path="$MessageAssembly1/sc_def2/record/field1"/>
+            <output path="$MessageAssembly1/sc_def2/record/field2"/>
         </move>
         <move>
             <input path="$MessageAssembly/sc_def/record[1]/field3"/>
-            <output path="$MessageAssembly1/sc_def2/record/field2"/>
+            <output path="$MessageAssembly1/sc_def2/record/field1"/>
         </move>
     </mappingDeclaration>
 </mappingRoot>
